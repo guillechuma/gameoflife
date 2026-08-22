@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.guillechuma.gameoflife",
   "name": "Game of Life",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Guillermo Chumaceiro",
   "license": "MIT",
   "description": "Bring Conway's classic Game of Life to your Omarchy bar with a theme-synced, retro LED matrix.",

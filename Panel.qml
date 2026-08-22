@@ -327,7 +327,7 @@ Panel {
 
         Text {
           width: parent.width
-          text: root.statusText || ("gen " + root.generation + "  ·  Space play  −/+ speed  N step  R random  C clear  G glider  P pulsar  U gun  A acorn  O Omarchy")
+          text: root.statusText || ("gen " + root.generation + "  ·  Space play  −/+ speed  N step  R random  C clear  ·  Presets: [G P U A O]")
           wrapMode: Text.WordWrap
           color: root.barForeground
           font.family: root.bar ? root.bar.fontFamily : Style.font.family
