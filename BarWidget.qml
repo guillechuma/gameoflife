@@ -56,7 +56,7 @@ BarWidget {
     id: button
     anchors.fill: parent
     bar: root.bar
-    text: root.vertical ? "G\nO\nL" : "GOL"
+    text: "▦"
     horizontalMargin: 8.5
     tooltipText: "Game of Life"
     onPressed: function(buttonCode) {

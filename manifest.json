@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Guillermo Chumaceiro",
   "license": "MIT",
-  "description": "A theme-synced, retro LED-matrix Conway's Game of Life for the Omarchy bar. Lightweight, no dependencies, pure QML + JS.",
+  "description": "Bring Conway's classic Game of Life to your Omarchy bar with a theme-synced, retro LED matrix.",
   "kinds": ["bar-widget"],
   "entryPoints": { "barWidget": "BarWidget.qml" },
   "barWidget": {
@@ -21,9 +21,9 @@
       "trail": 0.35
     },
     "schema": [
-      { "key": "cols",  "type": "number",  "label": "Grid columns",       "description": "Cells horizontally.",            "defaultValue": 48 },
-      { "key": "rows",  "type": "number",  "label": "Grid rows",          "description": "Cells vertically.",              "defaultValue": 32 },
-      { "key": "speed", "type": "number",  "label": "Steps per second",    "description": "Simulation speed while playing.","defaultValue": 8 },
+      { "key": "cols",  "type": "number",  "label": "Grid columns",       "description": "Cells horizontally (8–64).",       "defaultValue": 48 },
+      { "key": "rows",  "type": "number",  "label": "Grid rows",          "description": "Cells vertically (8–40).",         "defaultValue": 32 },
+      { "key": "speed", "type": "number",  "label": "Steps per second",    "description": "Simulation speed while playing (1–60).", "defaultValue": 8 },
       { "key": "wrap",  "type": "boolean", "label": "Wrap edges",          "description": "Loop edges (torus).",           "defaultValue": true },
       { "key": "trail", "type": "number",  "label": "Trail persistence",   "description": "0 = none, 1 = long CRT fade.",  "defaultValue": 0.35 }
     ]

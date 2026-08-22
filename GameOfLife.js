@@ -42,14 +42,25 @@ function step(grid, cols, rows, wrap) {
   return next
 }
 
+function seedSize(type) {
+  if (type === "glider") return { width: 3, height: 3 }
+  if (type === "acorn") return { width: 7, height: 3 }
+  if (type === "pulsar") return { width: 13, height: 13 }
+  if (type === "gun") return { width: 36, height: 9 }
+  return null
+}
+
 function seed(grid, cols, rows, type) {
+  var size = seedSize(type)
+  if (!size || cols < size.width || rows < size.height) return false
+
+  var cells
   if (type === "glider") {
-    var g = [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2]]
-    var ox = Math.floor(cols / 2 - 2)
-    var oy = Math.floor(rows / 2 - 2)
-    for (var i = 0; i < g.length; i++) setCell(grid, cols, ox + g[i][0], oy + g[i][1], 1)
+    cells = [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2]]
+  } else if (type === "acorn") {
+    cells = [[1, 0], [3, 1], [0, 2], [1, 2], [4, 2], [5, 2], [6, 2]]
   } else if (type === "pulsar") {
-    var p = [
+    cells = [
       [2, 0], [3, 0], [4, 0], [8, 0], [9, 0], [10, 0],
       [0, 2], [5, 2], [7, 2], [12, 2],
       [0, 3], [5, 3], [7, 3], [12, 3],
@@ -61,11 +72,8 @@ function seed(grid, cols, rows, type) {
       [0, 10], [5, 10], [7, 10], [12, 10],
       [2, 12], [3, 12], [4, 12], [8, 12], [9, 12], [10, 12]
     ]
-    var px = Math.floor(cols / 2 - 6)
-    var py = Math.floor(rows / 2 - 6)
-    for (var j = 0; j < p.length; j++) setCell(grid, cols, px + p[j][0], py + p[j][1], 1)
-  } else if (type === "gun") {
-    var gun = [
+  } else {
+    cells = [
       [0, 4], [0, 5], [1, 4], [1, 5],
       [10, 4], [10, 5], [10, 6], [11, 3], [11, 7], [12, 2], [12, 8], [13, 2], [13, 8],
       [14, 5], [15, 3], [15, 7], [16, 4], [16, 5], [16, 6], [17, 5],
@@ -73,6 +81,11 @@ function seed(grid, cols, rows, type) {
       [24, 0], [24, 1], [24, 5], [24, 6],
       [34, 2], [34, 3], [35, 2], [35, 3]
     ]
-    for (var k = 0; k < gun.length; k++) setCell(grid, cols, 1 + gun[k][0], 1 + gun[k][1], 1)
   }
+
+  var ox = Math.floor((cols - size.width) / 2)
+  var oy = Math.floor((rows - size.height) / 2)
+  for (var i = 0; i < cells.length; i++)
+    setCell(grid, cols, ox + cells[i][0], oy + cells[i][1], 1)
+  return true
 }
