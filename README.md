@@ -10,9 +10,9 @@ automatically — no separate theme code.
 - CRT-style ghosting trails (configurable).
 - Theme-synced colors via the active Omarchy shell theme.
 - Click / drag to draw (left = alive, right = erase).
-- Seed presets: Glider, Pulsar, Gosper Glider Gun, Acorn, plus Random and Clear.
+- Seed presets: Glider, Pulsar, Gosper Glider Gun, Acorn, and an Omarchy-logo easter egg, plus Random and Clear.
 - Session speed control with a 1–60 steps/sec slider, `−`/`+` buttons, and keyboard shortcuts.
-- Full keyboard control: `Space` play/pause, `−`/`+` speed, `N` step, `R` random, `C` clear, `G` glider, `P` pulsar, `U` gun, `A` acorn.
+- Full keyboard control: `Space` play/pause, `−`/`+` speed, `N` step, `R` random, `C` clear, `G` glider, `P` pulsar, `U` gun, `A` acorn, `O` Omarchy.
 
 ## Install
 
@@ -25,7 +25,7 @@ omarchy plugin add https://github.com/guillechuma/gameoflife.git --enable
 Click the `▦` widget to open or close the panel. Press `Escape` to close.
 
 When open, every control has a keyboard shortcut: `Space` play/pause, `N` step,
-`−`/`+` speed, `R` random, `C` clear, `G` glider, `P` pulsar, `U` gun, and `A` acorn.
+`−`/`+` speed, `R` random, `C` clear, `G` glider, `P` pulsar, `U` gun, `A` acorn, and `O` Omarchy.
 
 ## Configure
 

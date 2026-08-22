@@ -45,6 +45,7 @@ function step(grid, cols, rows, wrap) {
 function seedSize(type) {
   if (type === "glider") return { width: 3, height: 3 }
   if (type === "acorn") return { width: 7, height: 3 }
+  if (type === "omarchy") return { width: 9, height: 15 }
   if (type === "pulsar") return { width: 13, height: 13 }
   if (type === "gun") return { width: 36, height: 9 }
   return null
@@ -59,6 +60,22 @@ function seed(grid, cols, rows, type) {
     cells = [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2]]
   } else if (type === "acorn") {
     cells = [[1, 0], [3, 1], [0, 2], [1, 2], [4, 2], [5, 2], [6, 2]]
+  } else if (type === "omarchy") {
+    // The Omarchy wordmark's distinctive block-letter O, rasterized to cells.
+    var logo = [
+      "  XXXXX  ",
+      " XX   XX ",
+      "XXX   XXX", "XXX   XXX", "XXX   XXX", "XXX   XXX", "XXX   XXX",
+      "XXX   XXX", "XXX   XXX", "XXX   XXX", "XXX   XXX", "XXX   XXX", "XXX   XXX",
+      " XX   XX ",
+      "  XXXXX  "
+    ]
+    cells = []
+    for (var ly = 0; ly < logo.length; ly++) {
+      for (var lx = 0; lx < logo[ly].length; lx++) {
+        if (logo[ly][lx] === "X") cells.push([lx, ly])
+      }
+    }
   } else if (type === "pulsar") {
     cells = [
       [2, 0], [3, 0], [4, 0], [8, 0], [9, 0], [10, 0],

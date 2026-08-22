@@ -147,6 +147,7 @@ Panel {
         else if (e.modifiers === Qt.NoModifier && e.key === Qt.Key_P) { root.selectSeed("pulsar"); e.accepted = true }
         else if (e.modifiers === Qt.NoModifier && e.key === Qt.Key_U) { root.selectSeed("gun"); e.accepted = true }
         else if (e.modifiers === Qt.NoModifier && e.key === Qt.Key_A) { root.selectSeed("acorn"); e.accepted = true }
+        else if (e.modifiers === Qt.NoModifier && e.key === Qt.Key_O) { root.selectSeed("omarchy"); e.accepted = true }
         else if (e.modifiers === Qt.NoModifier && e.key === Qt.Key_Minus) { root.setSpeed(root.sessionSpeed - 1); e.accepted = true }
         else if (e.modifiers === Qt.NoModifier && e.key === Qt.Key_Plus) { root.setSpeed(root.sessionSpeed + 1); e.accepted = true }
       }
@@ -267,6 +268,7 @@ Panel {
             GLButton { label: "Pulsar"; enabled: root.cols >= 13 && root.rows >= 13; onClicked: root.selectSeed("pulsar") }
             GLButton { label: "Gun"; enabled: root.cols >= 36 && root.rows >= 9; onClicked: root.selectSeed("gun") }
             GLButton { label: "Acorn"; onClicked: root.selectSeed("acorn") }
+            GLButton { label: "Omarchy"; enabled: root.cols >= 9 && root.rows >= 15; onClicked: root.selectSeed("omarchy") }
           }
 
           Row {
@@ -325,7 +327,7 @@ Panel {
 
         Text {
           width: parent.width
-          text: root.statusText || ("gen " + root.generation + "  ·  Space play  −/+ speed  N step  R random  C clear  G glider  P pulsar  U gun  A acorn")
+          text: root.statusText || ("gen " + root.generation + "  ·  Space play  −/+ speed  N step  R random  C clear  G glider  P pulsar  U gun  A acorn  O Omarchy")
           wrapMode: Text.WordWrap
           color: root.barForeground
           font.family: root.bar ? root.bar.fontFamily : Style.font.family
