@@ -4,6 +4,8 @@ A tiny living world in your Omarchy bar: Conway's classic Game of Life,
 rendered as a retro LED matrix. The grid follows your active Omarchy theme
 automatically — no separate theme code.
 
+![Game of Life preview](preview.png)
+
 ## Features
 
 - Retro pixel LED grid rendered on a canvas (no per-cell items — stays light).
