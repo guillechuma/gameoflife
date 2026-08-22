@@ -41,7 +41,7 @@ function assertSeedSize(type, width, height) {
 
 assertSeedSize("glider", 3, 3)
 assertSeedSize("acorn", 7, 3)
-assertSeedSize("omarchy", 9, 15)
+assertSeedSize("omarchy", 15, 15)
 assertSeedSize("pulsar", 13, 13)
 assertSeedSize("gun", 36, 9)
 
@@ -54,7 +54,7 @@ assert.equal(Engine.seed(grid, 48, 32, "acorn"), true)
 assert.equal(aliveCells(grid), 7)
 Engine.clear(grid)
 assert.equal(Engine.seed(grid, 48, 32, "omarchy"), true)
-assert.equal(aliveCells(grid), 84)
+assert.equal(aliveCells(grid), 95)
 Engine.clear(grid)
 assert.equal(Engine.seed(grid, 48, 32, "pulsar"), true)
 assert.equal(aliveCells(grid), 48)

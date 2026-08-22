@@ -268,7 +268,7 @@ Panel {
             GLButton { label: "Pulsar"; enabled: root.cols >= 13 && root.rows >= 13; onClicked: root.selectSeed("pulsar") }
             GLButton { label: "Gun"; enabled: root.cols >= 36 && root.rows >= 9; onClicked: root.selectSeed("gun") }
             GLButton { label: "Acorn"; onClicked: root.selectSeed("acorn") }
-            GLButton { label: "Omarchy"; enabled: root.cols >= 9 && root.rows >= 15; onClicked: root.selectSeed("omarchy") }
+            GLButton { label: "Omarchy"; enabled: root.cols >= 15 && root.rows >= 15; onClicked: root.selectSeed("omarchy") }
           }
 
           Row {
