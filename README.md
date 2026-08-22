@@ -22,7 +22,7 @@ omarchy plugin add https://github.com/guillechuma/gameoflife.git --enable
 
 ## Usage
 
-Click the `GOL` widget to open or close the panel. Press `Escape` to close.
+Click the `▦` widget to open or close the panel. Press `Escape` to close.
 
 When open, every control has a keyboard shortcut: `Space` play/pause, `N` step,
 `−`/`+` speed, `R` random, `C` clear, `G` glider, `P` pulsar, `U` gun, and `A` acorn.
